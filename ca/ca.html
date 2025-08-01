@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flexible Grid Layout</title>
+        <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f3f4f6;
+        }
+    </style>
+</head>
+<body class="p-4 md:p-8">
+
+    <div class="max-w-4xl mx-auto space-y-6">
+
+        <!-- First Row: 3 Divisions -->
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+            <!-- Division 1 -->
+            <div class="bg-blue-500 text-white p-6 rounded-xl shadow-md flex items-center justify-center h-32">
+                <p class="text-xl font-bold">First Row - Div 1</p>
+            </div>
+            <!-- Division 2 -->
+            <div class="bg-blue-500 text-white p-6 rounded-xl shadow-md flex items-center justify-center h-32">
+                <p class="text-xl font-bold">First Row - Div 2</p>
+            </div>
+            <!-- Division 3 -->
+            <div class="bg-blue-500 text-white p-6 rounded-xl shadow-md flex items-center justify-center h-32">
+                <p class="text-xl font-bold">First Row - Div 3</p>
+            </div>
+        </div>
+
+        <!-- Second Row: 2 Divisions -->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <!-- Division 1 -->
+            <div class="bg-green-500 text-white p-6 rounded-xl shadow-md flex items-center justify-center h-32">
+                <p class="text-xl font-bold">Second Row - Div 1</p>
+            </div>
+            <!-- Division 2 -->
+            <div class="bg-green-500 text-white p-6 rounded-xl shadow-md flex items-center justify-center h-32">
+                <p class="text-xl font-bold">Second Row - Div 2</p>
+            </div>
+        </div>
+
+        <!-- Third Row: 1 Division -->
+        <div class="grid grid-cols-1 gap-4">
+            <!-- Division 1 -->
+            <div class="bg-red-500 text-white p-6 rounded-xl shadow-md flex items-center justify-center h-32">
+                <p class="text-xl font-bold">Third Row - Div 1</p>
+            </div>
+        </div>
+
+    </div>
+
+</body>
+</html>
