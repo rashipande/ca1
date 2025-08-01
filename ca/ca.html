@@ -1,51 +1,169 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Flexible Grid Layout</title>
-        <script src="https://cdn.tailwindcss.com"></script>
-    <style>
-        body {
-            font-family: 'Inter', sans-serif;
-            background-color: #f3f4f6;
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CA-1 Layout</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      height: 100vh;
+      display: flex;
+      background-color: #1e1e1e;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      color: white;
+    }
+
+    .container {
+      display: flex;
+      width: 100%;
+      height: 100%;
+      gap: 10px;
+      padding: 10px;
+      box-sizing: border-box;
+    }
+
+    .left-section {
+      display: flex;
+      flex-direction: column;
+      width: 20%;
+      height: 100%;
+      gap: 10px;
+    }
+
+    .right-section {
+      display: flex;
+      flex-direction: column;
+      width: 80%;
+      height: 100%;
+      gap: 10px;
+    }
+
+    .box {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-radius: 4px;
+      font-weight: bold;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+      transition: transform 0.2s;
+    }
+
+    .box:hover {
+      transform: scale(1.01);
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+    }
+
+    /* Left Section Boxes */
+    .top-box {
+      height: 10%;
+      background-color: #4CAF50; /* Green */
+    }
+
+    .middle-box {
+      height: 20%;
+      background-color: #2196F3; /* Blue */
+    }
+
+    .bottom-box {
+      height: 30%;
+      background-color: #F44336; /* Red */
+    }
+
+    /* Right Section Boxes */
+    .right-top-row {
+      display: flex;
+      gap: 10px;
+      height: 20%;
+    }
+
+    .right-top-box {
+      width: 35%;
+      background-color: #4CAF50; /* Green */
+    }
+
+    .right-middle-row {
+      display: flex;
+      gap: 10px;
+      height: 30%;
+    }
+
+    .right-middle-box {
+      width: 50%;
+      background-color: #2196F3; /* Blue */
+    }
+
+    .right-bottom-box {
+      height: 50%;
+      width: 100%;
+      background-color: #F44336; /* Red */
+    }
+
+    .box-label {
+      font-size: 12px;
+      text-align: center;
+      text-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
+    }
+
+    .section-title {
+      padding: 5px;
+      font-size: 14px;
+      opacity: 0.8;
+    }
+  </style>
 </head>
-<body class="p-4 md:p-8">
-
-    <div class="max-w-4xl mx-auto space-y-6">
-
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
-            <div class="bg-green-500 text-white p-6 rounded-xl shadow-md flex items-center justify-center h-32">
-                <p class="text-xl font-bold"></p>
-            </div>
-
-            <div class="bg-green-500 text-white p-6 rounded-xl shadow-md flex items-center justify-center h-32">
-                <p class="text-xl font-bold"></p>
-            </div>
-            <div class="bg-green-500 text-white p-6 rounded-xl shadow-md flex items-center justify-center h-32">
-                <p class="text-xl font-bold"></p>
-            </div>
-        </div>
-
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-            <div class="bg-blue-500 text-white p-6 rounded-xl shadow-md flex items-center justify-center h-32">
-                <p class="text-xl font-bold"></p>
-            </div>
-
-            <div class="bg-blue-500 text-white p-6 rounded-xl shadow-md flex items-center justify-center h-32">
-                <p class="text-xl font-bold"></p>
-            </div>
-        </div>
-
-        <div class="grid grid-cols-1 gap-4">
-            <div class="bg-red-500 text-white p-6 rounded-xl shadow-md flex items-center justify-center h-32">
-                <p class="text-xl font-bold"></p>
-            </div>
-        </div>
-
+<body>
+  <div class="container">
+    <div class="left-section">
+      <div class="section-title"></div>
+      <div class="box top-box">
+        <div class="box-label"></div>
+      </div>
+      <div class="box top-box">
+        <div class="box-label"></div>
+      </div>
+      <div class="box top-box">
+        <div class="box-label"></div>
+      </div>
+      <div class="box middle-box">
+        <div class="box-label"></div>
+      </div>
+      <div class="box middle-box">
+        <div class="box-label"></div>
+      </div>
+      <div class="box bottom-box">
+        <div class="box-label"></div>
+      </div>
     </div>
 
+    <div class="right-section">
+      <div class="section-title"></div>
+      <div class="right-top-row">
+        <div class="box right-top-box">
+          <div class="box-label"></div>
+        </div>
+        <div class="box right-top-box">
+          <div class="box-label"></div>
+        </div>
+        <div class="box right-top-box">
+          <div class="box-label"></div>
+        </div>
+      </div>
+      <div class="right-middle-row">
+        <div class="box right-middle-box">
+          <div class="box-label"></div>
+        </div>
+        <div class="box right-middle-box">
+          <div class="box-label"></div>
+        </div>
+      </div>
+      <div class="box right-bottom-box">
+        <div class="box-label"></div>
+      </div>
+    </div>
+  </div>
+
+  
 </body>
 </html>
